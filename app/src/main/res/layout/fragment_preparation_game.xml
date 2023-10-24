@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.PreparationGameFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/id_prep_img"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/id_prep_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#352280"
+        android:gravity="center"
+        android:text="PREPARATION OF GAME"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.06"/>
+
+    <ImageView
+        android:id="@+id/id_prep_img_money"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_prep_tv_title"
+        app:layout_constraintHeight_percent="0.1"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintWidth_percent="0.15"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight="0.1"
+        app:layout_constraintWidth_percent="0.2"
+        android:gravity="center"
+        android:text="money: 50"
+        android:id="@+id/id_prep_tv_money"
+        android:textStyle="bold|italic"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/id_prep_img_money"
+        app:layout_constraintTop_toTopOf="@id/id_prep_img_money"
+        app:layout_constraintBottom_toBottomOf="@id/id_prep_img_money"/>
+
+    <TextView
+        android:id="@+id/id_prep_tv_desc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="italic|bold"
+        android:textSize="19sp"
+        android:text="Choose one or two game outcomes. With two outcomes you will get much more money $"
+        android:background="@drawable/background_tv_rules"
+        android:layout_marginTop="10dp"
+        app:layout_constraintWidth_percent="0.95"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_prep_tv_money"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/id_prep_tv_red"
+        android:gravity="center"
+        android:text="RED"
+        android:layout_marginTop="10sp"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/contrail_one"
+        app:layout_constraintEnd_toStartOf="@id/id_prep_tv_black"
+        android:background="@drawable/background_img_prep_red"
+        app:layout_constraintTop_toBottomOf="@id/id_prep_tv_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.1"/>
+
+    <CheckBox
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/id_prep_checkbox_red"
+        android:background="@drawable/background_tv_rules"
+        app:layout_constraintStart_toStartOf="@id/id_prep_tv_red"
+        app:layout_constraintEnd_toEndOf="@id/id_prep_tv_red"
+        app:layout_constraintTop_toBottomOf="@id/id_prep_tv_red"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/id_prep_tv_black"
+        android:gravity="center"
+        android:text="BLACK"
+        android:layout_marginTop="10dp"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/contrail_one"
+        android:background="@drawable/background_img_prep_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_prep_tv_desc"
+        app:layout_constraintStart_toEndOf="@id/id_prep_tv_red"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.1"/>
+
+    <CheckBox
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/id_prep_checkbox_black"
+        android:background="@drawable/background_tv_rules"
+        app:layout_constraintStart_toStartOf="@id/id_prep_tv_black"
+        app:layout_constraintEnd_toEndOf="@id/id_prep_tv_black"
+        app:layout_constraintTop_toBottomOf="@id/id_prep_tv_black"/>
+
+    <TextView
+        android:id="@+id/id_prep_tv_coef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="select outcome"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        app:layout_constraintTop_toBottomOf="@id/id_prep_checkbox_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/contrail_one"
+        android:text="even number of points"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/id_prep_tv_even"
+        app:layout_constraintEnd_toStartOf="@id/id_prep_tv_odd"
+        android:background="@drawable/background_tv_rules"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_prep_tv_coef"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintHeight_percent="0.1"/>
+
+    <CheckBox
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/id_prep_checkbox_even"
+        android:background="@drawable/background_tv_rules"
+        app:layout_constraintStart_toStartOf="@id/id_prep_tv_red"
+        app:layout_constraintEnd_toEndOf="@id/id_prep_tv_red"
+        app:layout_constraintTop_toBottomOf="@id/id_prep_tv_even"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/contrail_one"
+        android:text="odd number of points"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/id_prep_tv_odd"
+        android:background="@drawable/background_tv_rules"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/id_prep_tv_even"
+        app:layout_constraintTop_toBottomOf="@id/id_prep_tv_coef"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintHeight_percent="0.1"/>
+
+    <CheckBox
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/id_prep_checkbox_odd"
+        android:background="@drawable/background_tv_rules"
+        app:layout_constraintStart_toStartOf="@id/id_prep_tv_black"
+        app:layout_constraintEnd_toEndOf="@id/id_prep_tv_black"
+        app:layout_constraintTop_toBottomOf="@id/id_prep_tv_odd"/>
+
+
+    <TextView
+        android:id="@+id/id_prep_tv_bet"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="0$"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toTopOf="@id/id_prep_button_go"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_prep_checkbox_even"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintHeight_percent="0.07"
+        android:background="@drawable/background_tv_rules"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/ButtonMenuStyle"
+        android:text="-next-"
+        android:textColor="@color/white"
+        android:fontFamily="@font/contrail_one"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:id="@+id/id_prep_button_go"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintStart_toStartOf="@id/id_prep_button_bet_plus"
+        app:layout_constraintEnd_toEndOf="@id/id_prep_button_bet_minus"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintTop_toBottomOf="@id/id_prep_tv_bet"
+        app:layout_constraintBottom_toTopOf="@id/id_prep_cs1"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textColor="@color/white"
+        android:text="+"
+        style="@style/ButtonMenuStyle"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:id="@+id/id_prep_button_bet_plus"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintEnd_toStartOf="@id/id_prep_tv_bet"
+        app:layout_constraintTop_toTopOf="@id/id_prep_tv_bet"
+        app:layout_constraintBottom_toBottomOf="@id/id_prep_tv_bet"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textColor="@color/white"
+        android:text="-"
+        style="@style/ButtonMenuStyle"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:id="@+id/id_prep_button_bet_minus"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintStart_toEndOf="@id/id_prep_tv_bet"
+        app:layout_constraintTop_toTopOf="@id/id_prep_tv_bet"
+        app:layout_constraintBottom_toBottomOf="@id/id_prep_tv_bet"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/id_prep_cs1"
+        android:background="#352280"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textColor="@color/white"
+            android:text="-back-"
+            android:textStyle="bold"
+            style="@style/ButtonMenuStyle"
+            android:textSize="50sp"
+            android:id="@+id/id_prep_button_back"
+            android:fontFamily="@font/contrail_one"
+            app:layout_constraintWidth_percent="0.6"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.MenuFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:id="@+id/id_menu_img"/>
+
+    <TextView
+        android:id="@+id/id_menu_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="ROULETTE"
+        android:textColor="@color/white"
+        android:fontFamily="@font/bangers"
+        android:textSize="60sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.15"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#352280"
+        android:id="@+id/id_menu_cs1"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_menu_tv_title">
+
+        <TextView
+            android:id="@+id/id_menu_tv_title_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="MENU"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/id_menu_img_money"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.08"
+            app:layout_constraintHeight_percent="0.9"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            app:layout_constraintWidth_percent="0.25"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:id="@+id/id_menu_tv_money"
+            android:textSize="22sp"
+            android:textColor="#f2bc0a"
+            android:textStyle="italic|bold"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toStartOf="@id/id_menu_img_money"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/id_menu_cs2"
+        android:background="#352280"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textColor="@color/white"
+            android:text="-EXIT-"
+            style="@style/ButtonMenuStyle"
+            android:textStyle="bold"
+            android:textSize="50sp"
+            android:id="@+id/id_menu_button_exit"
+            android:fontFamily="@font/contrail_one"
+            app:layout_constraintWidth_percent="0.6"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="GAME"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/contrail_one"
+            android:textStyle="bold"
+            style="@style/ButtonMenuStyle"
+            android:id="@+id/id_menu_button_play"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/id_menu_button_repl"
+            app:layout_constraintTop_toBottomOf="@id/id_menu_cs1"
+            app:layout_constraintWidth_percent="0.37"
+            app:layout_constraintHeight_percent="0.07"/>
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.19"
+        app:layout_constraintHeight_percent="0.1"
+        android:id="@+id/id_menu_img_play"
+        app:layout_constraintEnd_toStartOf="@id/id_menu_button_play"
+        app:layout_constraintTop_toTopOf="@id/id_menu_button_play"
+        app:layout_constraintBottom_toBottomOf="@id/id_menu_button_play"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="replenishment"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/contrail_one"
+            android:textStyle="bold"
+            style="@style/ButtonMenuStyle"
+            app:layout_constraintBottom_toTopOf="@id/id_menu_button_rules"
+            android:id="@+id/id_menu_button_repl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/id_menu_button_play"
+            app:layout_constraintWidth_percent="0.65"
+            app:layout_constraintHeight_percent="0.07"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.14"
+        app:layout_constraintWidth_percent="0.16"
+        android:id="@+id/id_menu_img_repl"
+        app:layout_constraintEnd_toStartOf="@id/id_menu_button_repl"
+        app:layout_constraintTop_toTopOf="@id/id_menu_button_repl"
+        app:layout_constraintBottom_toBottomOf="@id/id_menu_button_repl"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="RULES"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/contrail_one"
+            android:textStyle="bold"
+            style="@style/ButtonMenuStyle"
+            android:id="@+id/id_menu_button_rules"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/id_menu_cs2"
+            app:layout_constraintTop_toBottomOf="@id/id_menu_button_repl"
+            app:layout_constraintWidth_percent="0.37"
+            app:layout_constraintHeight_percent="0.07"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.17"
+        android:id="@+id/id_menu_img_rules"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintEnd_toStartOf="@id/id_menu_button_rules"
+        app:layout_constraintTop_toTopOf="@id/id_menu_button_rules"
+        app:layout_constraintBottom_toBottomOf="@id/id_menu_button_rules"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

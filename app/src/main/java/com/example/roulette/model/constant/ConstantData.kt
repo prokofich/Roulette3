@@ -1,0 +1,4 @@
+package com.example.roulette.model.constant
+
+val LIST_MONEY_FOR_REPLENISHMENT = listOf(60,80,100,150,200,250,300,400,500)
+val LIST_NUMBERS_FOR_ADAPTER = listOf(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25)

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "164446611985",
+    "project_id": "roulette-49498",
+    "storage_bucket": "roulette-49498.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164446611985:android:5fd861b7a78541c5ccdfb0",
+        "android_client_info": {
+          "package_name": "com.example.roulette"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD00sR6LxSN7eFoRqOAajY3VPg23O-iTH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

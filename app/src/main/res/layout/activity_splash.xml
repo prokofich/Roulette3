@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.SplashActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent"
+        android:id="@+id/id_splash_img"/>
+
+    <TextView
+        android:id="@+id/id_splash_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="ROULETTE"
+        android:fontFamily="@font/bangers"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="95sp"
+        app:layout_constraintWidth_percent="0.95"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ProgressBar
+        android:id="@+id/id_splash_progressbar"
+        android:indeterminate="true"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:backgroundTint="#0093e0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_splash_tv_title" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="loading"
+        android:textStyle="italic|bold"
+        android:textSize="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_splash_progressbar"
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintHeight_percent="0.1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

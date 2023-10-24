@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.GameFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/id_game_img"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/id_game_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#352280"
+        android:gravity="center"
+        android:text="GAME"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.06"/>
+
+    <TextView
+        android:id="@+id/id_game_tv_win"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/contrail_one"
+        android:textSize="55sp"
+        app:layout_constraintBottom_toTopOf="@id/id_game_rv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_game_tv_title"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintHeight_percent="0.1"/>
+
+    <ImageView
+        android:id="@+id/id_game_img_strelka"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/id_game_rv"
+        app:layout_constraintTop_toBottomOf="@id/id_game_tv_title"
+        app:layout_constraintEnd_toStartOf="@id/id_game_tv_win"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintHeight_percent="0.1"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/id_game_img_strelka2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/id_game_rv"
+        app:layout_constraintTop_toBottomOf="@id/id_game_tv_title"
+        app:layout_constraintStart_toEndOf="@id/id_game_tv_win"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintHeight_percent="0.1"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/id_game_rv"
+        tools:listitem="@layout/item_rv"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintBottom_toTopOf="@id/id_game_button_go"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_game_tv_win"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textColor="@color/white"
+        android:text="-go-"
+        android:visibility="visible"
+        android:fontFamily="@font/contrail_one"
+        android:textStyle="bold"
+        style="@style/ButtonMenuStyle"
+        android:textSize="40sp"
+        android:id="@+id/id_game_button_go"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_game_rv"
+        app:layout_constraintBottom_toTopOf="@id/id_game_cs1"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/id_game_cs1"
+        android:background="#352280"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textColor="@color/white"
+            android:text="-finish-"
+            android:textStyle="bold"
+            style="@style/ButtonMenuStyle"
+            android:textSize="40sp"
+            android:id="@+id/id_game_button_finish"
+            android:fontFamily="@font/contrail_one"
+            app:layout_constraintWidth_percent="0.45"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintStart_toEndOf="@id/id_game_button_restart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textColor="@color/white"
+            android:text="-restart-"
+            android:textStyle="bold"
+            style="@style/ButtonMenuStyle"
+            android:textSize="40sp"
+            android:id="@+id/id_game_button_restart"
+            android:fontFamily="@font/contrail_one"
+            app:layout_constraintWidth_percent="0.45"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/id_game_button_finish"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

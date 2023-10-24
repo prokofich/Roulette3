@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.RulesFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:id="@+id/id_rules_img"/>
+
+    <TextView
+        android:id="@+id/id_rules_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#352280"
+        android:gravity="center"
+        android:text="RULES"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.06"/>
+
+    <TextView
+        android:id="@+id/id_rules_tv_rules"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:textSize="35sp"
+        android:background="@drawable/background_tv_rules"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_rules_tv_title"
+        app:layout_constraintBottom_toTopOf="@id/id_rules_cs1"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/id_rules_cs1"
+        android:background="#352280"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textColor="@color/white"
+            android:text="-back-"
+            style="@style/ButtonMenuStyle"
+            android:textStyle="bold"
+            android:textSize="50sp"
+            android:id="@+id/id_rules_button_back"
+            android:fontFamily="@font/contrail_one"
+            app:layout_constraintWidth_percent="0.6"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

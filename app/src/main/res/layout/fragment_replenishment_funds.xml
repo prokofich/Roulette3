@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.ReplenishmentFundsFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/id_repl_img"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/id_repl_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.06"
+        android:gravity="center"
+        android:text="REPLENISHMENT"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="#352280"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/id_repl_img_money"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_repl_tv_title"
+        app:layout_constraintHeight_percent="0.1"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintWidth_percent="0.15"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight="0.1"
+        app:layout_constraintWidth_percent="0.2"
+        android:gravity="center"
+        android:text="money: 50"
+        android:id="@+id/id_repl_tv_money"
+        android:textStyle="bold|italic"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/id_repl_img_money"
+        app:layout_constraintTop_toTopOf="@id/id_repl_img_money"
+        app:layout_constraintBottom_toBottomOf="@id/id_repl_img_money"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/id_repl_img1"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@id/id_repl_img2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_repl_tv_money"
+        app:layout_constraintHeight_percent="0.23"
+        app:layout_constraintWidth_percent="0.3"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:id="@+id/id_repl_tv_money1"
+        app:layout_constraintStart_toStartOf="@id/id_repl_img1"
+        app:layout_constraintEnd_toEndOf="@id/id_repl_img1"
+        app:layout_constraintTop_toBottomOf="@id/id_repl_img1"
+        app:layout_constraintHeight_percent="0.06"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="-done-"
+        android:visibility="gone"
+        style="@style/ButtonMenuStyle"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/contrail_one"
+        android:textSize="20sp"
+        android:id="@+id/id_repl_button_select1"
+        app:layout_constraintStart_toStartOf="@id/id_repl_img1"
+        app:layout_constraintEnd_toEndOf="@id/id_repl_img1"
+        app:layout_constraintTop_toBottomOf="@id/id_repl_tv_money1"
+        app:layout_constraintHeight_percent="0.06"/>
+
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/id_repl_img2"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@id/id_repl_img3"
+        app:layout_constraintStart_toEndOf="@id/id_repl_img1"
+        app:layout_constraintTop_toBottomOf="@id/id_repl_tv_money"
+        app:layout_constraintHeight_percent="0.23"
+        app:layout_constraintWidth_percent="0.3"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:id="@+id/id_repl_tv_money2"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/id_repl_img2"
+        app:layout_constraintEnd_toEndOf="@id/id_repl_img2"
+        app:layout_constraintTop_toBottomOf="@id/id_repl_img2"
+        app:layout_constraintHeight_percent="0.06"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="-done-"
+        style="@style/ButtonMenuStyle"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:fontFamily="@font/contrail_one"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/id_repl_button_select2"
+        app:layout_constraintStart_toStartOf="@id/id_repl_img2"
+        app:layout_constraintEnd_toEndOf="@id/id_repl_img2"
+        app:layout_constraintTop_toBottomOf="@id/id_repl_tv_money2"
+        app:layout_constraintHeight_percent="0.06"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/id_repl_img3"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/id_repl_img2"
+        app:layout_constraintTop_toBottomOf="@id/id_repl_tv_money"
+        app:layout_constraintHeight_percent="0.23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.3"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:id="@+id/id_repl_tv_money3"
+        app:layout_constraintStart_toStartOf="@id/id_repl_img3"
+        app:layout_constraintEnd_toEndOf="@id/id_repl_img3"
+        app:layout_constraintTop_toBottomOf="@id/id_repl_img3"
+        app:layout_constraintHeight_percent="0.06"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="-done-"
+        style="@style/ButtonMenuStyle"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:fontFamily="@font/contrail_one"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/id_repl_button_select3"
+        app:layout_constraintStart_toStartOf="@id/id_repl_img3"
+        app:layout_constraintEnd_toEndOf="@id/id_repl_img3"
+        app:layout_constraintTop_toBottomOf="@id/id_repl_tv_money3"
+        app:layout_constraintHeight_percent="0.06"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textColor="@color/white"
+        style="@style/ButtonMenuStyle"
+        android:text="-choose a prize for free-"
+        android:textSize="25sp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/contrail_one"
+        android:id="@+id/id_repl_button_get_money_free"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/id_repl_cs1"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.08"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textColor="@color/white"
+        style="@style/ButtonMenuStyle"
+        android:text="-choose a prize for $150-"
+        android:textSize="25sp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/contrail_one"
+        android:id="@+id/id_repl_button_get_money"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/id_repl_button_get_money_free"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.08"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/id_repl_cs1"
+        android:background="#352280"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textColor="@color/white"
+            android:text="-back-"
+            android:textStyle="bold"
+            style="@style/ButtonMenuStyle"
+            android:textSize="50sp"
+            android:id="@+id/id_repl_button_back"
+            android:fontFamily="@font/contrail_one"
+            app:layout_constraintWidth_percent="0.6"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
