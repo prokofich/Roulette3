@@ -11,12 +11,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.roulette.R
 import com.example.roulette.model.constant.LIST_NUMBERS_FOR_ADAPTER
 import com.example.roulette.model.constant.OUTCOME_BLACK
-import com.example.roulette.model.constant.OUTCOME_EMPTY
 import com.example.roulette.model.constant.OUTCOME_EVEN
 import com.example.roulette.model.constant.OUTCOME_ODD
 import com.example.roulette.model.constant.OUTCOME_RED
 import com.example.roulette.model.constant.repository
-import kotlinx.coroutines.Job
 
 class GameAdapter(private val context: Context):RecyclerView.Adapter<GameAdapter.GameViewHolder>() {
 
@@ -62,18 +60,6 @@ class GameAdapter(private val context: Context):RecyclerView.Adapter<GameAdapter
                     repository.addMoneyInCashAccount(repository.bet*2)
                 }else{
                     repository.showToast(context,"-${repository.bet}$ ,YOU LOSE")
-                    /*if(repository.factor == 4){
-                        if(((repository.outcomeRedOrBlack == OUTCOME_RED && winNumber%2!=0)
-                                    ||(repository.outcomeRedOrBlack == OUTCOME_BLACK && winNumber%2==0))
-                            &&((repository.outcomeEvenOrOdd == OUTCOME_EVEN && winNumber%2==0)
-                                    ||(repository.outcomeEvenOrOdd == OUTCOME_ODD && winNumber%2!=0))){
-                            repository.showToast(context,"+${repository.bet * 4}$")
-                            repository.addMoneyInCashAccount(repository.bet*4)
-                        }else{
-                            if(repository.factor!=0)
-                            repository.showToast(context,"-${repository.bet}$ ,YOU LOSE")
-                        }
-                    }*/
                 }
             }else{
                 if(repository.factor == 4){

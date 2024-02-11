@@ -25,8 +25,8 @@ class GameFragment : Fragment(),ViewGameInterface {
 
     private var binding: FragmentGameBinding? = null
     private val presenterGame = PresenterGame(this)
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var adapterGame: GameAdapter
+    private var recyclerView: RecyclerView? = null
+    private var adapterGame: GameAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,8 +44,8 @@ class GameFragment : Fragment(),ViewGameInterface {
 
         recyclerView = binding!!.idGameRv
         adapterGame = GameAdapter(requireContext())
-        recyclerView.layoutManager = GridLayoutManager(requireContext(),5)
-        recyclerView.adapter = adapterGame
+        recyclerView?.layoutManager = GridLayoutManager(requireContext(),5)
+        recyclerView?.adapter = adapterGame
 
         //начало игры
         binding!!.idGameButtonGo.setOnClickListener {
@@ -92,7 +92,7 @@ class GameFragment : Fragment(),ViewGameInterface {
 
     //отправить загаданное число в адаптер
     override fun setNumberForAdapter(number: Int) {
-        adapterGame.setWinNumber(number)
+        adapterGame?.setWinNumber(number)
     }
 
 }

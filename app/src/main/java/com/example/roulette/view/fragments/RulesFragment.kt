@@ -17,7 +17,7 @@ import com.example.roulette.presenter.viewInterface.ViewRulesInterface
 class RulesFragment : Fragment(),ViewRulesInterface {
 
     private var binding: FragmentRulesBinding? = null
-    private var presenterRules = PresenterRules(this)
+    private val presenterRules = PresenterRules(this)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
